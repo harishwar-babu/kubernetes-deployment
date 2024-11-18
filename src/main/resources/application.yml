@@ -1,0 +1,7 @@
+server:
+  port: 8987
+  servlet:
+    context-path: /kubectl
+spring:
+  application:
+    name: kubectl-server

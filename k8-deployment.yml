@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubectl-server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kubectl-server
+  template:
+    metadata:
+      labels:
+        app: kubectl-server
+    spec:
+      containers:
+        - name: kubectl-server
+          image: harish1920/kubectl-server:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8987

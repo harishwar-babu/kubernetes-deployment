@@ -1,0 +1,4 @@
+FROM openjdk:17
+EXPOSE 8987
+ADD target/kubectl-server.jar kubectl-server.jar
+ENTRYPOINT ["java", "-jar", "/kubectl-server.jar"]
